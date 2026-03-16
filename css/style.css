@@ -1,0 +1,19 @@
+/*RESET E ESTILOS BASE*/
+/*'0' É UM SELETOR UNIVERSAL QUE APLICA ESTILOS A TODOS OS ELEMENTOS DA PAGINA*/
+*{
+    margin: 0; /*remove as margens padrão*/
+    padding 0; /*remove os espaçamentos internos padrão*/
+    box-sizing: border-box;/*faz com que o padding e border sejam incluidos na largura e altura total dos elementos*/
+}
+body{
+    /*fontes 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    Segoe UI é a primeira opção se n tiver vai tentando as proximas*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;/*altura entre as linhas */
+    color:#333; /*cor do texto cinza escuro*/
+    /*Gradient de fundo; 135deg e a direção de roxo claro para escuro*/
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem 5%;/*1rem = 16px tamanho padrão da fonte, 5% da largura do container*/;
+    display: flex; /*ativa o dlexbox*/
+    align-items: center;//*alinha os intens pro centro*/
+}
