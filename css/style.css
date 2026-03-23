@@ -13,7 +13,52 @@ body{
     color:#333; /*cor do texto cinza escuro*/
     /*Gradient de fundo; 135deg e a direção de roxo claro para escuro*/
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 1rem 5%;/*1rem = 16px tamanho padrão da fonte, 5% da largura do container*/;
+  min-height: 100vh; /*vh = viewport heigth, miniomo de 100% da altura da tela*/
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.65);/* branco com 95% de opacidade(transparencia)*/
+    
+        padding: 1rem 5%;/*1rem = 16px tamanho padrão da fonte, 5% da largura do container*/;
     display: flex; /*ativa o dlexbox*/
-    align-items: center;//*alinha os intens pro centro*/
+    align-items: center;/*alinha os intens pro centro*/
+    justify-content: space-between; /*espaço entre os itens*/
+    flex-wrap: wrap;/*permite quebra de linha em telas pequenas*/
+    gap: 1rem;/*espasamento entre os itens flexiveis*/
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);/*sombra; eixo x, exo y, */
+    position:sticky;/*grudar o cabeçalho ao rolar a pafina*/
+    top: 0;/*distancia do topo ao grudar*/
+    z-index: 1000;/*Garante que fique ascima de outros elementos*/
+
+}
+
+header img{
+    height: 60px;/*altura fixa em pixel*/
+    width: auto;/*largura aultomatica para manter a proporção de acordo a altura */
+    transition: transform 0.3s ease;/*transição suave de 3 seg para animação*/
+}
+
+header img:hover/*quando passa o mouse faz alguma coisa*/{
+transform: scale(1.05);/*aumentar em 5% a minha img*/
+}
+/*NAVEGAÇÂO*/
+nav{
+    display: flex;
+    gap: 2rem;/*32px de espaçamento entre os links*/
+    flex-wrap: wrap;
+
+}
+nav a{
+    text-decoration: none;/*remover o sublinhado padrão do link*/
+    color: #764ba2;/*cor roxa*/
+    font-weight: 600;/*peso da fonte*/
+    padding: 0.5rem 1rem; /*8px em cima/baixo, 16px nas lateriais*/
+    border-radius: 25%; ;
+    position: relative;
+    
+}
+nav a:hover{
+    background-color: white;
+    transform: translate(-2px);/*move 2px para cima*/
+    box-shadow: 0 5px 15px rgba(118, 75, 162, 0.3);/*sombra roxa suave*/    
 }
