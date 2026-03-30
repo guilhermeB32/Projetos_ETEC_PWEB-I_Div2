@@ -53,7 +53,7 @@ nav a{
     color: #764ba2;/*cor roxa*/
     font-weight: 600;/*peso da fonte*/
     padding: 0.5rem 1rem; /*8px em cima/baixo, 16px nas lateriais*/
-    border-radius: 25%; ;
+    border-radius: 25px; ;
     position: relative;
     
 }
@@ -62,3 +62,46 @@ nav a:hover{
     transform: translate(-2px);/*move 2px para cima*/
     box-shadow: 0 5px 15px rgba(118, 75, 162, 0.3);/*sombra roxa suave*/    
 }
+nav a::after{/*pseudo elementos para criar a linha animada abaixo dos links*/
+    
+    content: '';/*necessario para criar o elemento*/
+    position: absolute;/*posção em relação ao irtem*/
+    bottom: 0;/**/
+    left: 50%;/*começa do meio para as leterais*/
+    transform: translateX(-50%);/*centraliza horizontalmente*/
+    width: 0;/*começa com largura 0*/
+    height: 2px;/*altura da linha*/
+    background-color: #216813;
+    transition: width 0.3 ease;
+
+}
+nav a:hover::after{
+    width: 80%;/**/
+}
+/*conteudo do blog*/
+main{
+    max-width: 1200px;/*largura maxima em pixeis*/
+    margin: 2rem auto;/*32px emcima/abaixo*/
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);/*efeito de desfoque*/
+    animation: slideIn 0.5s ease-out;
+
+}
+/*Definiçoes das animaçoes*/
+@keyframes slideIn {
+from{
+    opacity: 0;/*invisivel*/
+    transform: translate(30px);
+}
+to{
+    opacity: 1;
+    transform: translateY(0);/*posição original
+    */
+}
+}
+
+    
+/**/
